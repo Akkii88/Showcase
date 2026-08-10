@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Fashion Brand Website"
+description = "A premium fashion branding website showcasing high-end clothing and shoes. Features rich editorial photography, brand storytelling, collection highlights, and a luxury retail aesthetic. Designed to communicate exclusivity, craftsmanship, and style to fashion-forward consumers."
+version = "1.0.0"
+id = "artifacts/fashion-brand"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21100
+
+[services.development]
+run = "pnpm --filter @workspace/fashion-brand run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/fashion-brand", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/fashion-brand/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21100"
+BASE_PATH = "/"
