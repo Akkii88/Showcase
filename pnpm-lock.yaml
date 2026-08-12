@@ -167,6 +167,18 @@ importers:
       '@rollup/rollup-darwin-arm64':
         specifier: ^4.62.4
         version: 4.62.4
+      '@types/cookie-parser':
+        specifier: ^1.4.10
+        version: 1.4.10(@types/express@5.0.6)
+      '@types/cors':
+        specifier: ^2.8.19
+        version: 2.8.19
+      '@types/express':
+        specifier: ^5.0.6
+        version: 5.0.6
+      '@types/node':
+        specifier: 'catalog:'
+        version: 25.9.5
       '@vercel/node':
         specifier: ^5.1.11
         version: 5.9.8(rollup@4.62.3)
