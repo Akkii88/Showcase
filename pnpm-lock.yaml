@@ -163,6 +163,12 @@ importers:
       '@tailwindcss/oxide-darwin-arm64':
         specifier: 4.3.3
         version: 4.3.3
+      cors:
+        specifier: ^2.8.6
+        version: 2.8.6
+      express:
+        specifier: ^5.2.1
+        version: 5.2.1
     devDependencies:
       '@rollup/rollup-darwin-arm64':
         specifier: ^4.62.4

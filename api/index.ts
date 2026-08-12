@@ -1,12 +1,16 @@
-import app from "../artifacts/api-server/src/app";
+import express, { type Express } from "express";
+import cors from "cors";
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
+const app: Express = express();
+
+app.use(cors());
+app.use(express.json());
+
+app.get("/healthz", (_req, res) => {
+  res.json({ status: "ok" });
+});
+
 export default function handler(req: VercelRequest, res: VercelResponse) {
-  // Vercel strips the `/api` function prefix from req.url, but the Express
-  // app mounts routes under `/api`. Re-add it so paths resolve in both
-  // local (prefix kept) and Vercel (prefix stripped) environments.
-  if (req.url && !req.url.startsWith("/api")) {
-    req.url = `/api${req.url === "/" ? "" : req.url}`;
-  }
   return app(req, res);
 }

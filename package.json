@@ -12,7 +12,9 @@
   "private": true,
   "dependencies": {
     "@replit/connectors-sdk": "^0.4.1",
-    "@tailwindcss/oxide-darwin-arm64": "4.3.3"
+    "@tailwindcss/oxide-darwin-arm64": "4.3.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
   },
   "devDependencies": {
     "@rollup/rollup-darwin-arm64": "^4.62.4",
