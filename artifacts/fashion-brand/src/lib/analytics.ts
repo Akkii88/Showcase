@@ -1,4 +1,4 @@
-const MEASUREMENT_ID = "G-8MFZNSD5VG";
+const MEASUREMENT_ID = "G-VZHH30KLQX";
 
 declare global {
   interface Window {
